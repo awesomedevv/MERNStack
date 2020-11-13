@@ -3,10 +3,14 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt-nodejs";
 
 // Define the model
-const Schema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: {
-    first: String,
-    last: String,
+    first: {
+      type: String,
+    },
+    last: {
+      type: String,
+    },
   },
   email: {
     type: String,
@@ -17,9 +21,13 @@ const Schema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  password: String,
+  password: {
+    type: String,
+  },
 
-  headline: String,
+  headline: {
+    type: String,
+  },
   location: {
     city: {
       type: String,
@@ -29,10 +37,16 @@ const Schema = new mongoose.Schema({
     },
   },
   position: {
-    role: String,
-    office: String,
+    role: {
+      type: String,
+    },
+    office: {
+      type: String,
+    },
   },
-  bio: String,
+  bio: {
+    type: String,
+  },
   connection: {
     pending: [
       {
@@ -51,13 +65,9 @@ const Schema = new mongoose.Schema({
     type: String,
     default: "",
   },
-  userID: {
-    type: String,
-    default: "1",
-  }, // This is temporary field for connections
 });
 
-Schema.pre("save", function (next) {
+userSchema.pre("save", function (next) {
   // get access to user model, then we can use user.email, user.password
   const user = this;
 
@@ -78,7 +88,7 @@ Schema.pre("save", function (next) {
 });
 
 // Make use of methods for comparedPassword
-Schema.methods.comparedPassword = function (candidatePassword, cb) {
+userSchema.methods.comparedPassword = function (candidatePassword, cb) {
   bcrypt.compare(candidatePassword, this.password, function (err, good) {
     if (err) {
       return cb(err);
@@ -88,4 +98,4 @@ Schema.methods.comparedPassword = function (candidatePassword, cb) {
 };
 
 // Export the model
-export default mongoose.model("User", Schema);
+export default mongoose.model("User", userSchema);

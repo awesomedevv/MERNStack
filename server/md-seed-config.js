@@ -1,15 +1,14 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+import Users from "./seeders/users.seeder";
 
-const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/dbname';
+const mongoURL = process.env.MONGODB_URI || "mongodb://localhost/mern";
 
 /**
  * Seeders List
  * order is important
  * @type {Object}
  */
-export const seedersList = {
-
-};
+export const seedersList = { Users };
 /**
  * Connect to mongodb implementation
  * @return {Promise}
