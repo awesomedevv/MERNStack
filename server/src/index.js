@@ -10,13 +10,6 @@ import Authentication from "./api/authentication";
 import UserRouter from "./user/router";
 import NetworkRouter from "./mynetwork/router";
 
-if (!process.env.JWT_SECRET) {
-  const err = new Error(
-    "No JWT_SECRET in env variable, check instructions: https://github.com/amazingandyyy/mern#prepare-your-secret"
-  );
-  console.error(err);
-}
-
 const app = express();
 
 mongoose
@@ -34,17 +27,20 @@ app.use(
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.get("/ping", (req, res) => res.send("pong"));
-app.get("/", (req, res) =>
-  res.json({ source: "https://github.com/passion1989/MERNStack" })
-);
+app.get("/", (req, res) => res.send("Welcome to testing!"));
+
 app.post("/signup", Authentication.signup);
 app.post("/signin", Authentication.signin);
+
 app.get("/auth-ping", Middlewares.loginRequired, (req, res) =>
   res.send("connected")
 );
+
 app.use("/user", Middlewares.loginRequired, UserRouter);
-app.use("/mynetwork", Middlewares.loginRequired, NetworkRouter);
+
+app.use("/mynetwork", NetworkRouter);
 
 app.use((err, req, res, next) => {
   console.log("Error:", err.message);

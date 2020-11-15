@@ -1,28 +1,52 @@
 import UserModel from "../user/model";
 
+const PAGE_SIZE = 7;
+
 export default {
   getConnections: (req, res, next) => {
-    res.send(req.user);
-    next();
-  },
-  getPendingConnections: (req, res, next) => {
-    req.user.comparedPassword(req.body.password, (err, good) => {
-      if (err || !good)
-        return res.status(401).send(err || "Incorrect Password");
-      const userId = req.user._id;
-      const newProfile = {
-        name: {
-          first: req.body.firstName,
-          last: req.body.lastName,
-        },
-      };
-      delete newProfile.email;
-      delete newProfile.phone;
-      delete newProfile.password;
+    var page = req.query.page;
 
-      UserModel.findByIdAndUpdate(userId, newProfile, { new: true })
-        .then(() => res.sendStatus(200))
-        .catch(next);
+    if (page < 1 || !page) page = 1;
+
+    const skip = (page - 1) * PAGE_SIZE;
+
+    UserModel.countDocuments({}, (err, count) => {
+      if (err) {
+        res.status(404).send(err);
+      }
+
+      const totalPages = Math.ceil(count / PAGE_SIZE);
+      UserModel.find({})
+        .skip(skip) // Same as before, always use 'skip' first
+        .limit(PAGE_SIZE)
+        .exec()
+        .then((users) => {
+          if (users) {
+            return res.status(200).send({
+              total_pages: totalPages,
+              current_page: page,
+              users: users,
+            });
+          }
+          return res.status(404).send({
+            error: "Users not found",
+          });
+        });
     });
   },
+  getConnectionPages: (req, res, next) => {
+    UserModel.countDocuments({}, (err, count) => {
+      if (err) {
+        res.status(404).send(err);
+      }
+
+      const totalPages = Math.ceil(count / PAGE_SIZE);
+
+      res.status(200).send({
+        total_pages: totalPages,
+      });
+    });
+  },
+
+  getPendingConnections: (req, res, next) => {},
 };

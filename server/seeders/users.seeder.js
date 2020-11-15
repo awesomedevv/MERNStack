@@ -15,7 +15,7 @@ class UsersSeeder extends Seeder {
 
 const data = [
   {
-    name: { first: "Beatrice", last: "Porter" },
+    name: { first: "Wang", last: "Zheng" },
     email: "tester@mail.com",
     password: "123123",
     headline: "Become Perfect",
@@ -35,7 +35,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C5603AQHYNxADyifJpQ/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=PETQ-5x3wqgmSAWATcx9VwenoYQEWlpv_5pw31yCkik",
-    userID: "0",
   },
   {
     name: { first: "Lelia", last: "Hogan" },
@@ -58,7 +57,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C4D03AQFhZeNTuSSdNg/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=Ve8YilE7Y7PEfzlXp0V-Y_w_hEE0KTiLCT4mzx3q_8I",
-    userID: "1",
   },
   {
     name: { first: "Addie", last: "Tate" },
@@ -81,7 +79,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C4E03AQG6RFDOyJzJAA/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=_eBBrNstOZ_C6RfSYYSO068AqQrGiJsLkA2Rw9iwJlE",
-    userID: "2",
   },
   {
     name: { first: "Jose", last: "Sharp" },
@@ -104,7 +101,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C4D03AQFPIIRpQWEy0g/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=02bzziZHxZILdzmiZRiPgg0hVg6jMMtKI3iqE3WXnzg",
-    userID: "3",
   },
   {
     name: { first: "Lelia", last: "Hogan" },
@@ -127,7 +123,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C4D03AQHHy3ZHZ-Fx2w/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=v4bpu_4mHCvTKIvr8z1GgkoKcBXCDcdPqjQHpP9ekWY",
-    userID: "4",
   },
   {
     name: { first: "Addie", last: "Tate" },
@@ -150,7 +145,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C4D03AQEABbMn3fqKbw/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=t85AjXiHZexDuT0Z1mJrrZFXn0RYsgkPaWG16cmQIvg",
-    userID: "5",
   },
   {
     name: { first: "Jose", last: "Sharp" },
@@ -173,7 +167,6 @@ const data = [
     },
     avatarUrl:
       "https://www.linkedin.com/in/andrew-dizhak-86b599173/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people%3B3uhibmAoT7imvzR3hWMfsA%3D%3D",
-    userID: "6",
   },
   {
     name: { first: "Lelia", last: "Hogan" },
@@ -196,7 +189,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C5603AQHIHpU_jXW-_Q/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=UX3SADw9STGSZj_neJ0sO6DfrLcEuR_QSLH-WUwE0vo",
-    userID: "7",
   },
   {
     name: { first: "Addie", last: "Tate" },
@@ -219,7 +211,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C5603AQE0rhPH1ZJBnw/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=V0M9aj_9wUnUgczbRgdI8nn2fuYHxMPLMaEdDf64OcA",
-    userID: "8",
   },
   {
     name: { first: "Jose", last: "Sharp" },
@@ -242,7 +233,6 @@ const data = [
     },
     avatarUrl:
       "https://media-exp1.licdn.com/dms/image/C5603AQGIaPHgUPbglg/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=x5pNZ9Lzd97oCtue5NgdG3ZAk0FTtntzwDLCaiyVDeU",
-    userID: "9",
   },
 ];
 
