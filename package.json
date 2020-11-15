@@ -17,19 +17,18 @@
   "engineStrict": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amazingandyyy/mern.git"
+    "url": "git+https://github.com/passion1989/mern.git"
   },
   "keywords": [
     "react"
   ],
-  "author": "Amazingandyyy <amazingandyyy@gmail.com> (Andy Chen)",
+  "author": "wang zheng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amazingandyyy/mern/issues"
+    "url": "https://github.com/passion1989/mern/issues"
   },
-  "homepage": "https://github.com/amazingandyyy/mern#readme",
+  "homepage": "https://github.com/passion1989/mern#readme",
   "devDependencies": {
-    "@amazingandyyy/git-hooks": "^0.1.0",
     "eslint": "^4.14.0",
     "eslint-config-logux": "^17.0.0",
     "eslint-config-standard": "^10.2.1",

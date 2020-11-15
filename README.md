@@ -88,4 +88,4 @@ Email Me: wang198904@gmail.com
 
 ### License
 
-[MIT](https://github.com/amazingandyyy/mern/blob/master/LICENSE)
+[MIT]

@@ -4,7 +4,7 @@ const PAGE_SIZE = 7;
 
 export default {
   getConnections: (req, res, next) => {
-    var page = req.query.page;
+    var page = parseInt(req.query.page);
 
     if (page < 1 || !page) page = 1;
 
