@@ -1,5 +1,6 @@
 body {
-    background-color: white;
+    background-color: #F2F2F2;
+    font-family: 'Raleway';
     .cointainer {
       padding: 10px;
       padding-top: 30px;
@@ -7,7 +8,7 @@ body {
     nav {
         .navbar-toggler {
             outline: none;
-            border: none;   
+            border: none;
         }
     }
     .row{
@@ -19,6 +20,13 @@ body {
     button.btn{
         cursor: pointer;
     }
+    .MuiTabs-centered {
+        height: 100%;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #333333;
+    }
+
 }
 
 
@@ -27,6 +35,9 @@ body {
     }
 }
 
-@media (min-width: 767px) { 
-    
+@media (min-width: 767px) {
+
  }
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,200&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
