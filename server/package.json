@@ -17,7 +17,7 @@
     "cors": "^2.8.1",
     "cross-env": "^5.2.0",
     "dotenv": "^8.2.0",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "jwt-simple": "^0.5.6",
     "mongoose": "^5.10.14",
     "mongoose-data-seed": "^2.1.6",
